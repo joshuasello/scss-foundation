@@ -1,0 +1,19 @@
+/**
+ * foundation v0.0.1
+ */
+
+@import "globals";
+@import "norm";
+@import "helpers";
+@import "mixins";
+
+
+@if $debug-style-on {
+  *,
+  *::before,
+  *::after {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+  }
+}

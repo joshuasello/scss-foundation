@@ -1,0 +1,85 @@
+/**
+ * _mixins.scss v0.0.1
+ */
+
+@use "globals";
+
+
+//  --------------------------------------------------
+//  Responsiveness
+//  --------------------------------------------------
+
+/**
+ * Wraps style that should be applied for small screens.
+ *
+ * @mixin
+ * @section Foundation Mixins
+ * @example
+ *  @include small-screen { ... }
+ */
+@mixin small-screen {
+  @media screen and (max-width: globals.$small-breakpoint) {
+    @content;
+  }
+}
+
+/**
+ * Wraps style that should be applied for medium screens.
+ *
+ * @mixin
+ * @section Foundation Mixins
+ * @example
+ *  @include medium-screen { ... }
+ */
+@mixin medium-screen {
+  @media screen and (max-width: globals.$medium-breakpoint) {
+    @content;
+  }
+}
+
+/**
+ * Wraps style that should be applied for large screens.
+ *
+ * @mixin
+ * @section Foundation Mixins
+ * @example
+ *  @include large-screen { ... }
+ */
+@mixin large-screen {
+  @media screen and (max-width: globals.$large-breakpoint) {
+    @content;
+  }
+}
+
+
+//  --------------------------------------------------
+//  Themes
+//  --------------------------------------------------
+
+/**
+ * Wraps style that should be applied for when the user has dark mode set in their preferences.
+ *
+ * @mixin
+ * @section Foundation Mixins
+ * @example
+ *  @include prefers-dark-mode { ... }
+ */
+@mixin prefers-dark-mode {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+
+/**
+ * Wraps style that should be applied for when the user has light mode set in their preferences.
+ *
+ * @mixin
+ * @section Foundation Mixins
+ * @example
+ *  @include prefers-light-mode { ... }
+ */
+@mixin prefers-light-mode {
+  @media (prefers-color-scheme: light) {
+    @content;
+  }
+}

@@ -1,0 +1,158 @@
+/**
+ * _setup.scss v0.0.1
+ *
+ * Some classes are copied from the HTML5 Boilerplate project (https://github.com/h5bp/main.css#readme).
+ */
+
+
+//  --------------------------------------------------
+//  Positioning
+//  --------------------------------------------------
+
+// Horizontally center an element with absolute positioning.
+.horizontal-center-absolute {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Vertically center an element with absolute positioning.
+.vertical-center-absolute {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+// Center an element with absolute positioning.
+.center-absolute {
+  @extend .horizontal-center-absolute;
+  @extend .vertical-center-absolute;
+}
+
+// Horizontally center an element with relative positioning.
+.horizontal-center-relative {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Vertically center an element with absolute positioning.
+.vertical-center-relative {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// Center an element with absolute positioning.
+.center-relative {
+  @extend .horizontal-center-relative;
+  @extend .vertical-center-relative;
+}
+
+
+//  --------------------------------------------------
+//  Elements
+//  --------------------------------------------------
+
+// Section class.
+.section,
+section {
+  @extend section;
+
+  position: relative;
+  display: flex;
+  height: fit-content;
+  width: 100%;
+
+  &.fill-view-height {
+    height: 100vh;
+  }
+
+  &.fill-parent-height {
+    height: 100%;
+  }
+}
+
+// 1. Make the container full-width with a maximum width
+// 2. Center it in the viewport
+// 3. Leave some space on the edges, especially valuable on small screens
+
+.wrapper {
+  position: relative;
+  max-width: 1180px; // 1
+  margin-left: auto; // 2
+  margin-right: auto; // 2
+  padding-left: 50px; // 3
+  padding-right: 50px; // 3
+  width: calc(100% - 100px); // 1
+  height: 100%;
+}
+
+
+//  --------------------------------------------------
+//  Misc
+//  --------------------------------------------------
+
+// Remove margin.
+.no-margin {
+  margin: 0 !important;
+}
+
+// Hide visually and from screen readers.
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+// Hide visually and from screen readers, but maintain layout.
+.invisible {
+  visibility: hidden;
+}
+
+// Display an element as a block (duh).
+.display-block {
+  display: block !important;
+}
+
+// Hide only visually, but have it available for screen readers:
+// https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+//
+// 1. For long content, line feeds are not interpreted as spaces and small width
+//    causes content to wrap 1 word per line:
+//    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+// Clearfix: contain floats
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//    `contenteditable` attribute is included anywhere else in the document.
+//    Otherwise it causes space to appear at the top and bottom of elements
+//    that receive the `clearfix` class.
+// 2. The use of `table` rather than `block` is only necessary if using
+//    `:before` to contain the top-margins of child elements.
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}

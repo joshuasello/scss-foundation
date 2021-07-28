@@ -1,0 +1,17 @@
+/**
+ * _globals.scss v0.0.1
+ *
+ * This file holds the default global variables for your site's styles.
+ * The variables in this file should not be changed directly but rather
+ * be defined before this file is compiled.
+ */
+
+
+// Controls whether the debugging style is on or off.
+$debug-style-on: false !default;
+
+// Default screen size breakpoints.
+$small-breakpoint:  400px !default;
+$medium-breakpoint: 768px !default;
+$large-breakpoint:  1024px !default;
+
